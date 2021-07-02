@@ -1,4 +1,4 @@
-package eos_trace_api
+package eos_go_trace_api_plugin_wrapper
 
 import (
 	"github.com/eoscanada/eos-go"
@@ -30,7 +30,7 @@ type Action struct {
 	Account        eos.AccountName   `json:"account"`
 	Name           eos.ActionName    `json:"action"`
 	Receiver       eos.AccountName   `json:"receiver"`
-	GlobalSequence eos.Uint64           `json:"global_sequence,omitempty"`
+	GlobalSequence eos.Uint64        `json:"global_sequence,omitempty"`
 	Authorization  []PermissionLevel `json:"authorization,omitempty"`
 	eos.ActionData
 }
@@ -39,7 +39,7 @@ type Transaction struct {
 	eos.TransactionHeader
 
 	ID eos.Checksum256 `json:"id"`
-	Actions []*Action `json:"actions"`
+	Actions []*Action  `json:"actions"`
 }
 
 type SignedTransaction struct {

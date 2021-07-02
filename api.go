@@ -1,4 +1,4 @@
-package eos_trace_api
+package eos_go_trace_api_plugin_wrapper
 
 import (
 	"bytes"
